@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" type="text/css" href="/logo.png">
+	<link rel="stylesheet" type="text/css" href="style1.css">
+	<meta charset="utf-8">
+	<title>Мой профиль</title>
+</head>
+<body>
+
+	<img src="/logo.png" class="logo">
+
+	<section class="nav">
+		<div class="main s">Главная</div>
+		<div class="users s">Пользователи</div>
+		<div class="myProfile s">Мой профиль</div>
+		<div class="mess s">Сообщения</div>
+
+		<div class="exit"><a href="/">Выйти</a></div>
+	</section>
+	
+	<section class="myProfileSect sect">
+		<div class="name"><%= login%></div>
+			<img class="changePencil" src="/pencil.svg">
+		<div class="moveChar">
+			<div class="amountNotes move">
+				<span class="amountNotesSp"></span> записей
+			</div> 
+			<div class="subs move">
+				<span class="subsSp"></span> подписчиков
+			</div> 
+			<div class="subscribes move">
+				<span class="subscribesSp"></span> подписок
+			</div> 
+		</div>
+		<br>
+		<div class="about"><%= about%></div>
+
+		<div class="notes">
+			<div class="createNoteBut">Создать запись</div>
+			<div class="allNotes">
+				<div></div>
+			</div>
+		</div>
+		
+	</section>
+
+	<section class="usersSect sect">
+		<div class="searchUser">
+			<input type="text" class="searchText" placeholder="Найти пользователя"> 
+			<div class="searchBut"></div>
+		</div>
+		<div class="allUsers"></div>
+	</section>
+
+	<section class="otherUser sect">
+		<div class="createBack createBack2">Назад</div>
+		<div class="name name2">Login</div>
+		<div class="subscribeBut">Подписаться</div>
+		<div class="writeBut">Написать</div>
+		<div class="moveChar">
+			<div class="amountNotes move">
+				<span class="amountNotesSp amountNotesSp2"></span> записей
+			</div> 
+			<div class="subs move">
+				<span class="subsSp subsSp2"></span> подписчиков
+			</div> 
+			<div class="subscribes move">
+				<span class="subscribesSp subscribesSp2"></span> подписок
+			</div> 
+		</div>
+		<br>
+		<div class="about about2">About</div>
+		<div class="notes notes2">
+			<div class="allNotes allNotes2">
+				<div></div>
+			</div>
+		</div>
+	</section>
+
+	<section class="mainSect sect">
+		<div class="allMainNotes">
+		</div>
+	</section>
+	<div class="mainSubs sect">
+		<div class="mainSubsSp">Ваши подписки:</div>
+		<div class="mainSubsAll">
+			
+		</div>
+	</div>
+
+	<div class="messSect sect">
+		<div class="allMessangers"></div>
+	</div>
+
+	<div class="chatWithOther sect">
+		<div class="createBack createBack3">Назад</div>
+		<div class="chatName"></div>
+		<div class="chatAllMessages"></div>
+		<input type="text" class="textInp" placeholder="Введите свое сообщение...">
+		<div class="textSendBut">Отправить</div>
+	</div>
+
+        <div class="createParams">
+			<div class="createBack">Назад</div>
+			<textarea class="createText" placeholder="Напишите запись"></textarea>
+			<div class="createSend">Сохранить запись</div>
+		</div>
+
+		<div class="changeUser">
+			<div class="changeUserBack">Назад</div>
+			<input type="text" class="changeUserName" placeholder="Название профиля">
+			<textarea class="changeUserAbout" placeholder="Описание вашего профиля"></textarea>
+			<div class="changeUserSave">Сохранить изменения</div>
+		</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script>
+	let date = new Date()
+	let now;
+	let rooms = []
+
+	if( +date.getMonth() + +1 < 10){
+		now = date.getDate() + '.' + '0' + (+date.getMonth() + +1) + '.' + date.getFullYear()
+	}
+	else{
+		now = date.getDate() + '.' + (+date.getMonth() + +1) + '.' + date.getFullYear()
+	}
+	$(".myProfileSect").width(+window.innerWidth - +425 + 'px')
+	$(".usersSect").width(+window.innerWidth - +425 + 'px')
+	$(".otherUser").width(+window.innerWidth - +425 + 'px')
+	$(".mainSect").width(+window.innerWidth - +425 + 'px')
+	$(".messSect").width(+window.innerWidth - +425 + 'px')
+	$(".chatWithOther").width(+window.innerWidth - +425 + 'px')
+	let Me;
+	function getMe(){
+		let req = new XMLHttpRequest()
+		req.open("GET", 'getMe', false)
+		req.setRequestHeader("login", encodeURIComponent('<%= login%>'))
+		req.send()
+		Me = JSON.parse(req.responseText)[0]
+	}
+	getMe()
+</script>
+<script src="/Me.js"></script>
+<script src="/Users.js"></script>
+<script src="/Main.js"></script>
+<script src="/Messages.js"></script>
+</body>
+</html>

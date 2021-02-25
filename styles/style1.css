@@ -1,0 +1,571 @@
+body{
+	background: black;
+	color: white;
+	font-family: candara;
+	overflow-x: hidden;
+}
+a{
+	color: #4CF077;
+	text-decoration: none
+}
+.logo{
+	position: fixed;
+	left: 10px;
+	top: 10px;
+	width: 60px;
+}
+.container{
+	width: 400px;
+	border: 3px solid #4F4F4F;
+	border-radius: 20px;
+	height: 500px;
+	margin: 100px auto;
+	font-size: 20px;
+}
+.inp{
+	width: 220px;
+	margin-top: 100px;
+	margin-left: 90px;
+	background: black;
+	border: 3px solid #4CF077;
+	border-radius: 10px;
+	padding: 6px;
+	font-size: 17px;
+	color: white;
+}
+.inp1{
+	width: 220px;
+	margin-top: 30px;
+	margin-left: 90px;
+	background: black;
+	border: 3px solid #4CF077;
+	border-radius: 10px;
+	padding: 6px;
+	font-size: 17px;
+	color: white;
+}
+input:focus{
+	background: black;
+	color: white;
+	outline: none
+}
+.send{
+	width: 150px;
+	margin-top: 70px;
+	margin-left: 125px;
+	background: black;
+	border: 3px solid #4CF077;
+	border-radius: 10px;
+	padding: 6px;
+	font-size: 17px;
+	color: #4CF077;
+}
+.create{
+	text-align: center;
+	color: #4CF077;
+	font-size: 13px;
+}
+.err{
+	text-align: center;
+	color:#4CF077;
+	margin-top: 30px;
+}
+
+
+
+
+
+.container2{
+	width: 400px;
+	border: 3px solid #4F4F4F;
+	border-radius: 20px;
+	height: 600px;
+	margin: 70px auto;
+	font-size: 20px;
+}
+.send2{
+	width: 200px;
+	margin-top: 120px;
+	margin-left: 100px;
+	background: black;
+	border: 3px solid #4CF077;
+	border-radius: 10px;
+	padding: 6px;
+	font-size: 17px;
+	color: #4CF077;
+}
+
+
+
+
+
+
+.nav{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 200px;
+	transition:all 0.4s ease;
+}
+.emit{
+	position: relative;
+	top: 0px;
+	left: 0px;
+	height: 99%;
+	width: 200px;
+	border-right: 3px solid #545454;
+	float: left;
+}
+.exit{
+	position: fixed;
+	bottom: 20px;
+	left: 20px;
+	font-size: 19px;
+	transition: all 0.2s ease;
+}
+.exit:hover{
+	color:#4CF077;
+	transition: all 0.2s ease;
+	cursor: pointer;
+}
+.s{
+	margin-left: 30px;
+	margin-top: 13px;
+	font-size: 19px;
+	transition: all 0.2s ease;
+	cursor: pointer;
+	width: 115px;
+	background-color: black;
+	padding: 4px;
+	border-radius: 7px;
+}
+.s:hover{
+	border-radius: 7px;
+	width: 115px;
+	transition: all 0.2s ease;
+	margin-left: 34px;
+}
+.myProfile{
+	font-size: 19px;
+	margin-left: 30px;
+	margin-top: 13px;
+	background:  #4CF077;
+	border-radius: 7px;
+	padding: 4px;
+	color: black;
+	width: 115px;
+	transition: all 0.2s ease;
+}
+.main{
+	margin-top: 100px;
+}
+.myProfileSect{
+	position: relative;
+	float: left;
+	transition:all 0.4s ease;
+}
+.name{
+	font-size: 60px;
+	color: #4CF077;
+	margin-left: 40px;
+	float: left;
+}
+.moveChar{
+	font-family: calibri;
+	display: block;
+	position: relative;
+	margin-top: 80px;
+	margin-left: 10px;
+}
+.move{
+	float: left;
+	margin-left: 30px;
+}
+.about{
+	margin-top: 20px;
+	position: relative;
+	margin-left: 20px;
+}
+.notes{
+	margin-top: 50px;
+	margin-left: 5%;
+	width: 90%;
+	border-top: 3px solid #545454;
+}
+.createNoteBut{
+	background: #4CF077;
+	border-radius: 17px;
+	padding: 6px;
+	color: black;
+	text-align: center;
+	width: 20%;
+	margin-left: 40%;
+	margin-top: 20px;
+	cursor: pointer;
+}
+.note{
+	width: 100%;
+	border: 1px solid #2E2E2E;
+	border-radius: 10px;
+	padding: 3px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.noteName{
+	font-size: 16px;
+	margin-left: 30px;
+	color:#4CF077;
+}
+.noteText{
+	width: 90%;
+	margin-left: 5%;
+	font-size: 20px;
+}
+.noteDate{
+	text-align: right;
+	margin-right: 10px;
+	color:#545454;
+	height: 40px;
+}
+.noteBut{
+	width: 30px;
+	float: left;
+	filter: invert(1);
+	margin-left: 15px;
+	margin-top: 5px;
+}
+.changePencil{
+	filter: invert(1);
+	width: 30px;
+	float: right;
+	margin-right: 30px;
+	margin-top: 30px;
+	transition: all 0.2s ease;
+	cursor: pointer;
+}
+.changePencil:hover{
+	transform: scale(1.2) 
+}
+.createParams{
+	width: 500px;
+	border-radius: 10px;
+	border: 3px solid #545454;
+	position: fixed;
+	top: -1000px;
+	left: 30% ;
+	background: black;
+	transition: all 0.8s ease;
+}
+.createBack{
+	color:#4CF077;
+	margin-left: 20px;
+	margin-top: 10px;
+	cursor: pointer;
+	width: 50px;
+}
+.createSend{
+	width: 150px;
+	margin-left: 175px;
+	background: #4CF077;
+	color: black;
+	border-radius: 10px;
+	padding: 4px;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	cursor: pointer;
+}
+.createText{
+	width: 90%;
+	margin-left: 5%;
+	height: 300px;
+	margin-top: 10px;
+	background: black
+}
+textarea{
+	outline: none;
+	color: white;
+	border: 0px solid black;
+	background: black;
+	resize: none;
+}
+input{
+	outline: none;
+	color: white;
+	border: 0px solid black;
+	background: black;
+}
+.changeUser{
+	width: 70%;
+	position: fixed;
+	border-radius: 10px;
+	border: 3px solid #545454;
+	top: -1000px;
+	left: 15% ;
+	background: black;
+	transition: all 0.8s ease;
+}
+.changeUserBack{
+	color:#4CF077;
+	margin-left: 20px;
+	margin-top: 10px;
+	cursor: pointer;
+	width: 50px;
+}
+.changeUserName{
+	width: 90%;
+	margin-left: 5%;
+	margin-top: 10px;
+	background: black;
+	border: 1px solid #4CF077;
+	border-radius: 10px;
+	padding: 5px;
+}
+.changeUserAbout{
+	width: 90%;
+	height: 300px;
+	margin-left: 5%;
+	margin-top: 10px;
+	background: black;
+	border: 1px solid #4CF077;
+	border-radius: 10px;
+	padding: 5px;
+}
+.changeUserSave{
+	width: 30%;
+	margin-left: 35%;
+	background: #4CF077;
+	color: black;
+	border-radius: 10px;
+	padding: 4px;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	cursor: pointer;
+}
+.usersSect{
+	display: none;
+	transition: all 0.4s ease;
+	color: white;
+	float: left;
+	margin-left: 200px;
+}
+.userFrom{
+	width: 95%;
+	margin-left: 2.5%;
+	margin-top: 7px;
+	border: 3px solid #545454;
+	border-radius: 10px;
+	height: 100px;
+}
+.userFromName{
+	margin-left: 5px;
+	margin-top: 5px;
+	color:#4CF077;
+	padding: 5px;
+	font-size: 25px;
+	cursor: pointer;
+}
+.userFromAbout{
+	margin-left: 15px;
+	width: 50%;
+	float: left;
+	height: 15px;
+
+}
+.userFromSubs{
+	float: left;
+	margin-left: 100px;
+	position: relative;
+	top: -10px;
+}
+.userFromNotes{
+	margin-left: 30px;
+	float: left;
+	position: relative;
+	top: -10px;
+}
+.otherUser{
+	display: none;
+	float: left;
+	margin-left: 200px;
+}
+.searchUser{
+	width: 100%;
+}
+.searchText{
+	width: 300px;
+	height: 30px;
+	border-radius: 10px;
+	border: 3px solid  #4CF077;
+	margin-left: 80px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-size: 20px;
+}
+.subscribeBut{
+	padding: 5px;
+	border-radius: 6px;
+	font-size: 14px;
+	background: #4CF077;
+	width: 130px;
+	color: black;
+	float: left;
+	margin-top: 30px;
+	margin-left: 30px;
+	cursor: pointer;
+	text-align: center;
+	transition: all 0.3s linear;
+}
+.sect{
+	float: left;
+	margin-left: 203px;
+}
+.mainSect{
+	margin-left: 200px;
+}
+.reloadIm{
+	width: 50px;
+	filter: invert(1);
+	position: absolute;
+}
+.mainSubs{
+	width: 180px;
+	float: left;
+	margin-left: 12px;
+	display: none;
+}
+.mainSubsSp{
+	font-size: 16px;
+	text-align: center;
+	color: #4CF077;
+	margin-left: 40px;
+}
+.mainSub{
+	font-size: 10px;
+	width: 100%;
+	border-bottom: 1px solid #2E2E2E;
+	margin-top: 10px;
+	padding: 5px;
+}
+.mainSubName{
+	font-size: 16px;
+	margin-left: 10px;
+	margin-bottom: -10px;
+	color:#4CF077;
+	cursor: pointer;
+}
+.mainSubNotes{
+	margin-left: 20px;
+}
+.noteName{
+	cursor: pointer;
+}
+.mainSect{
+	min-height: 2px;
+}
+.noteId{
+}
+.messSect{
+	min-height: 2px;
+}
+.writeBut{
+	padding: 5px;
+	border-radius: 6px;
+	font-size: 14px;
+	width: 130px;
+	color: #4CF077;
+	float: left;
+	margin-top: 30px;
+	margin-left: 20px;
+	cursor: pointer;
+	text-align: center;
+	transition: all 0.3s linear;
+	border: 3px solid #4CF077;
+}
+.chatName{
+	width: 90%;
+	margin-left: 5%;
+	border-bottom: 1px solid #545454;
+	font-size: 35px;
+	padding-left: 30px;
+}
+.chatWithOther{
+	min-height: 2px;
+	display: none;
+	padding-bottom: 35px;
+}
+.textInp{
+	width: 50%;
+	position: fixed;
+	bottom: 20px;
+	left: 25%;
+	border: 1px solid #4CF077;
+	border-radius: 10px;
+	height: 20px;
+}
+.textSendBut{
+	width: 100px;
+	position: fixed;
+	bottom: 20px;
+	left: 20px;
+	margin-left:75%;
+	background: #4CF077;
+	border-radius: 10px;
+	height: 25px;
+	color: black;
+	text-align: center;
+	padding-top: 2px;
+	cursor: pointer;
+}
+.chatAllMessages{
+	width: 90%;
+	margin-left: 5%;
+}
+.chatMessage{
+	width: 300px;
+	margin-left: 20px;
+	border-radius: 10px;
+	border: 1px solid #4CF077;
+	color: white;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+.chatMessageName{
+	margin-left: 10px;
+	margin-top: 5px;
+	color: #4CF077;
+	font-size: 16px
+}
+.chatMessageText{
+	margin-left: 5px;
+	color: white;
+	font-size: 15px;
+	margin-bottom: 5px;
+}
+.messUser{
+	width: 90%;
+	margin-left: 5%;
+	padding: 7px;
+	margin-top: 20px;
+}
+.messUserName{
+	font-size: 30px;
+	margin-left: 20px;
+	color:#4CF077;
+}
+.messUserText{
+	margin-left: 10px;
+	font-size: 17px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #545454;
+	color: #A8A8A8;
+	cursor: pointer;
+}
+.messUserText:hover{
+	color: #E3E3E3;
+}
+.messSect{
+	display: none;
+}
