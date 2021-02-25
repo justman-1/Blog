@@ -19,7 +19,7 @@ class Key{
 		this.key = key;
 	}
 }
-let socket = new WebSocket("wss://messanger/");
+let socket = new WebSocket("wss://messanger.herokuapp.com");
 socket.onopen = function(e) {
 
 };
